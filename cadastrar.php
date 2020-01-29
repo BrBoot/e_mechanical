@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
 require_once 'conexao.php';
 
 if(isset($_POST ["btnEnviar"])):
@@ -9,11 +11,13 @@ if(isset($_POST ["btnEnviar"])):
     $estado = mysqli_escape_string($conexao, $_POST["inputState"]);
     $nome = mysqli_escape_string($conexao, $_POST["inputName"]);	
 
-	$sql = "INSERT INTO internautas (cidade, data_da_criacao, descricao, email, estado, nome)
-                                    VALUES ('$cidade', NOW(), '$desc', '$email', '$estado', '$nome')";
-	if(mysqli_query($conexao, $sql)):
-		header('Location: index.php?sucesso');
-	else:
-        header('Location: index.php?erro');
+	$sql = "INSERT INTO internautas (cidade, data_da_criacao, descricao, estado, nome)
+                                    VALUES ('$cidade', NOW(), '$desc', '$estado', '$nome')";
+    if(mysqli_query($conexao, $sql)):
+        $_SESSION['msg'] = "<p class='lead' style='color: green;'>Cadastrado com sucesso</p>";
+		header('Location: index.php');
+        else:
+            $_SESSION['msg'] = "<p class='lead' style='color: red;'>Falha ao cadastrar</p>";
+            header('Location: index.php');
 	endif;	
 endif;

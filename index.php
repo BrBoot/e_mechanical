@@ -1,3 +1,6 @@
+<?php
+    session_start();
+?>
 
 <!doctype html>
 <html lang="pt-br">
@@ -20,6 +23,12 @@
     </header>
 
     <div class="container-fluid pt-5">
+      <?php
+      if(isset($_SESSION['msg'])){
+        echo $_SESSION['msg'];
+        unset($_SESSION['msg']);
+      }
+      ?>
       <form action="cadastrar.php" method="POST">
         <div class="form-row">
           <div class="form-group col-md-6">                        
