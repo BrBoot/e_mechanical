@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="pt-br">
   <head>
@@ -19,11 +20,14 @@
     </header>
 
     <div class="container-fluid pt-5 bg-#D8D7FF">
-      <form action="enviar.php" method="POST">
+      <form action="cadastrar.php" method="POST">
         <div class="form-row">
-          <div class="form-group col-md-10">                        
+          <div class="form-group col-md-6">                        
               <input type="name" class="form-control" id="inputName" placeholder="Nome">
-          </div>           
+          </div>
+          <div class="form-group col-md-6">
+              <input type="email" class="form-control" id="inputEmail" placeholder="E-mail">
+          </div>          
         </div>
 
         <div class="form-row">
