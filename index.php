@@ -19,24 +19,24 @@
       </div>        
     </header>
 
-    <div class="container-fluid pt-5 bg-#D8D7FF">
+    <div class="container-fluid pt-5">
       <form action="cadastrar.php" method="POST">
         <div class="form-row">
           <div class="form-group col-md-6">                        
-              <input type="name" class="form-control" id="inputName" placeholder="Nome">
+              <input type="name" class="form-control" name="inputName" placeholder="Nome">
           </div>
-          <div class="form-group col-md-6">
-              <input type="email" class="form-control" id="inputEmail" placeholder="E-mail">
+          <div class="form-group col-md-5">
+              <input type="email" class="form-control" name="inputEmail" placeholder="E-mail">
           </div>          
         </div>
 
         <div class="form-row">
               <div class="form-group col-md-6">                        
-                  <input type="text" class="form-control" id="inputCity" placeholder="Cidade">
+                  <input type="text" class="form-control" name="inputCity" placeholder="Cidade">
               </div>
 
               <div class="form-group col-md-4">                        
-                  <select id="inputEstado" class="form-control">
+                  <select name="inputState" class="form-control">
                       <option selected>Estado...</option>
                       <option>Acre</option>
                       <option>Alagoas</option>
@@ -69,25 +69,20 @@
               </div>          
         </div>
 
-              <div class="form-row">        
+              <div class="form-row">
                   <div class="form-group col-md-3">
                     <p class="h3 mb-3 font-weight-normal">Descrição:</p>
                   </div>            
               </div>
               <div class="form-row">
                 <div class="form-group col-md-8">
-                  <textarea rows="6" cols="150" id="comment" name="text" placeholder="Descreve aqui o seu problema"></textarea>
+                  <textarea rows="4" cols="80" name="desc" placeholder="Descreva aqui o seu problema"></textarea>
                 </div>
               </div>      
         
         <button type="submit" class="btn btn-primary btn-lg" name="btnEnviar">Enviar</button>
       </form>
     </div>
-
-
-
-
-
 
     <footer>
 
