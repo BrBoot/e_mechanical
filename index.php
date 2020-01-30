@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
     crossorigin="anonymous">
-    <link rel="stylesheet" href="estilos/estilo.css">
+    <script src="https://kit.fontawesome.com/dbd07a4d89.js" crossorigin="anonymous"></script>
   </head>
   <body>
 
@@ -94,7 +94,16 @@
     </div>
 
     <footer>
-
+          <div class="text-light text-center bg-dark pt-3 pb-2 mt-3">
+              <p class="lead">Desenvolvido por Eduardo</p>
+              <span style="font-size: 24px; color: Mediumslateblue;">
+                  <i class="fab fa-facebook-square"></i>
+              </span>
+              <span style="font-size: 24px; color: Mediumslateblue;">
+                <i class="fab fa-instagram"></i>
+              </span>  
+              
+          </div>
 
     </footer>
 
